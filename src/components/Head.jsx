@@ -15,7 +15,6 @@ const Head = () => {
   const [showSuggestions, setShowSuggestions] = useState(false);
 
   const searchCache = useSelector((state) => state.search);
-  console.log(searchCache);
   useEffect(() => {
     const timer = setTimeout(() => {
       if (searchCache[searchText]) {
