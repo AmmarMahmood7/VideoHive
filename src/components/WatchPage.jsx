@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { closeMenu } from "../utils/navigationSlice";
 import CommentsContainer from "./CommentsContainer";
+import LiveChat from "./LiveChat";
 
 const WatchPage = () => {
   const [searchParam] = useSearchParams();
@@ -13,12 +14,12 @@ const WatchPage = () => {
     dispatch(closeMenu());
   }, []);
   return (
-    <div>
-      <div className="m-3 p-3">
+    <div className="flex flex-col">
+      <div className="m-3 p-3 flex">
         <iframe
           className="rounded-2xl "
-          width="900"
-          height="600"
+          width="800"
+          height="400"
           src={`https://www.youtube.com/embed/${searchParam.get(
             "v"
           )}?si=edIcran2nrDN9306`}
@@ -26,6 +27,9 @@ const WatchPage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
+        <div>
+          <LiveChat />
+        </div>
       </div>
       <CommentsContainer />
     </div>

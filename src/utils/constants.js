@@ -16,3 +16,52 @@ export const formatNumber = (number) => {
         return number.toString();
     }
 }
+
+//comments data
+
+export const commentsData = [
+    {
+        name: "John Doe",
+        comment: "This is a sample comment.",
+        replies: [
+            {
+                name: "Emily Parker",
+                comment: "This is a reply to the sample comment.",
+                replies: [
+                    {
+                        name: "Michael Johnson",
+                        comment: "This is a reply to Emily Parker's comment.",
+                    },
+                    {
+                        name: "Sophia Garcia",
+                        comment: "This is another reply to Emily Parker's comment.",
+                    },
+                ],
+            },
+            {
+                name: "Sophia Garcia",
+                comment: "This is another reply to the sample comment.",
+            },
+        ],
+    },
+    {
+        name: "Jane Smith",
+        comment: "This is a second sample comment.",
+        replies: [
+            {
+                name: "Michael Johnson",
+                comment: "This is a reply to the second sample comment.",
+            },
+            {
+                name: "Emily Parker",
+                comment: "This is another reply to the second sample comment.",
+                replies: [
+                    {
+                        name: "Sophia Garcia",
+                        comment: "This is a reply to Emily Parker's second comment.",
+                    },
+                ],
+            },
+        ],
+    },
+];

@@ -11,10 +11,6 @@ const list = [
   "t-series",
   "Bollywood Music",
   "Indian Pop Music",
-  "Live",
-  "Playlists",
-  "Sitcoms",
-  "Gameshows",
 ];
 const ButtonList = () => {
   return (
