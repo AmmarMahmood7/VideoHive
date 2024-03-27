@@ -65,3 +65,7 @@ export const commentsData = [
         ],
     },
 ];
+
+
+
+export const live_Chat_Count = 15;
