@@ -14,11 +14,10 @@ const WatchPage = () => {
     dispatch(closeMenu());
   }, []);
   return (
-    <div className="flex flex-col">
-      <div className="m-3 p-3 flex">
+    <div className="flex flex-col w-full">
+      <div className="m-3 p-3 flex ">
         <iframe
-          className="rounded-2xl "
-          width="800"
+          className="rounded-2xl w-8/12"
           height="400"
           src={`https://www.youtube.com/embed/${searchParam.get(
             "v"
@@ -27,7 +26,7 @@ const WatchPage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
-        <div>
+        <div className="">
           <LiveChat />
         </div>
       </div>
