@@ -27,7 +27,11 @@ const Head = () => {
   }, [searchText]);
 
   const getSuggestions = async () => {
-    const data = await fetch(YOUTUBE_SEARCH_API + searchText);
+    const data = await fetch(YOUTUBE_SEARCH_API + searchText, {
+      headers: {
+        "x-cors-api-key": "temp_bf5a9f8b48231d854fa145e6d251b453",
+      },
+    });
     const json = await data.json();
 
     setSuggestions(json[1]);
@@ -77,9 +81,9 @@ const Head = () => {
             <ul className="">
               {suggestions.map((suggestion) => {
                 return (
-                  <li className="flex items-center hover:bg-gray-200">
-                    <IoIosSearch className=" h-5 w-5" />
-                    <span className="ml-2">{suggestion}</span>
+                  <li className="flex items-center hover:bg-gray-200 gap-2 p-2 capitalize hover:font-semibold hover:cursor-pointer">
+                    <IoIosSearch className="h-5 w-5" />
+                    <span>{suggestion}</span>
                   </li>
                 );
               })}
